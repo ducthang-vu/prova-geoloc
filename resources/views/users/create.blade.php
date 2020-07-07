@@ -67,7 +67,7 @@
 <script>
     (function() {
   var places = algoliasearch.initPlaces('<YOUR_PLACES_APP_ID>', '<YOUR_PLACES_API_KEY>');
-  
+
   function updateForm(response) {
     var hits = response.hits;
     var suggestion = hits[0];
@@ -122,12 +122,12 @@
       var coords = response.coords;
       lat = coords.latitude.toFixed(6);
       lng = coords.longitude.toFixed(6);
-      
+
       $latInput.value = lat;
       $lngInput.value = lng;
 
       $button.textContent = 'Locate me';
-      
+
       places.reverse({
         aroundLatLng: lat + ',' + lng,
         hitsPerPage: 1
@@ -136,4 +136,5 @@
   });
 })();
 </script>
+
 @endsection
