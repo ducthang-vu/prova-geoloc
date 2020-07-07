@@ -20,7 +20,7 @@
                 Laravel
             </div>
 
-            @dump($users)
+        
             <div class="links">
                 <a href="{{ route('user.create') }}">user</a>
                 <a href="https://laracasts.com">Laracasts</a>
